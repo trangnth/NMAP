@@ -1,4 +1,4 @@
-﻿# NMAP (Network Mapper)
+﻿#  NMAP (Network Mapper)
 ## Khái niệm
 Nmap (Network Mapper) là một công cụ quét, theo dõi và đánh giá bảo mật một hệ thống mạng được phát triển bởi Gordon Lyon (hay còn được biết đến với tên gọi Fyodor Vaskovich).
 
@@ -44,15 +44,15 @@ Khi gửi các gói tin trên tới 1 port của mục tiêu nếu nmap nhận �
 - Tùy chon `–F` (Fast scan): nmap quét 100 port phổ biến nhất thay vì mặc định 1000 port.
 - Tùy chọn `–top-ports` : quét n port phổ biến nhất.
 - Tùy chọn `–r`: thứ tự quét các port từ thấp lên cao thay vì mặc định là ngẫu nhiên.
-##Một số lệnh phổ biến
+## Một số lệnh phổ biến
 Quét hệ điều hành của server: 
 ```
 nmap -O remote_host
 ```
 Sử dụng "-" hoặc "/24" để quét nhiều host / server cùng lúc 
-
+```
 nmap -PN xxx.xxx.xxx.xxx-yyy
-
+```
 Quét một mạng rộng hơn 
 ```
 nmap -sP network_address_range
@@ -87,7 +87,7 @@ Quét xác định phiên bản dịch vụ đang chyaj trên host
 nmap -PN -p port_number -sV remote_host
 ```
 
-*Ví dụ:* 
+**Ví dụ:** 
 ```
 nmap -sS -sU -p U:53,4000, T:1-100,444 192.168.169.192
 ```
