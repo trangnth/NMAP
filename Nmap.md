@@ -1,5 +1,5 @@
-﻿#NMAP (Network Mapper)
-##Khái niệm
+﻿# NMAP (Network Mapper)
+## Khái niệm
 Nmap (Network Mapper) là một công cụ quét, theo dõi và đánh giá bảo mật một hệ thống mạng được phát triển bởi Gordon Lyon (hay còn được biết đến với tên gọi Fyodor Vaskovich).
 
 Nmap được công bố lần đầu tiên vào tháng 9 năm 1997.
@@ -13,12 +13,12 @@ Các chức năng của nmap:
 - Xác đinh hệ điều hành của thiết bị.
 - Chạy các script đặc biệt.
 
-##Install
+## Install
 ```
 apt-get update
 apt-get install nmap
 ```
-##Scan với Nmap
+## Scan với Nmap
 Bắt đầu với các lệch cơ bản:
 - Quét 1 IP	`nmap 192.168.1.1`
 - Quét 1 dải IP	`nmap 192.168.1.1/24`
