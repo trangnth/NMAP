@@ -1,4 +1,4 @@
-#  NMAP (Network Mapper)
+﻿#  NMAP (Network Mapper)
 ## Khái niệm
 Nmap (Network Mapper) là một công cụ quét, theo dõi và đánh giá bảo mật một hệ thống mạng được phát triển bởi Gordon Lyon (hay còn được biết đến với tên gọi Fyodor Vaskovich).
 
@@ -81,7 +81,7 @@ Một vài tùy chọn:
 - `-sA` (TCP ACK scan)
 - `-sW` (TCP Window scan)
 - `-sO` (IP protocol scan)
-- `
+
 
 **Read more:**
  
@@ -143,9 +143,13 @@ Trong trường hợp này nmap sẽ quét các port UDP 53 và 4000, quét các
 Đọc thêm tại http://nmap.org/book/nse-usage.html#nse-categories
 
 Ví dụ: `nmap -Pn -p80 --traceroute --script traceroute-geolocation amazon.com`
+
 ## Nmap Output Formats
-- `-oN` normal output
-- `-oX` 
+- `-oN <filespec>` normal output
+- `-oX <filespec>` XML output
+- `-oS <filespec>` Script kiddie output
+- `-oG <filespec>` grepable output
+- `-oA <basename> ` Output to all formats
 
 
 
