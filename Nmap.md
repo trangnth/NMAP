@@ -1,4 +1,4 @@
-﻿#  NMAP (Network Mapper)
+#  NMAP (Network Mapper)
 ## Khái niệm
 Nmap (Network Mapper) là một công cụ quét, theo dõi và đánh giá bảo mật một hệ thống mạng được phát triển bởi Gordon Lyon (hay còn được biết đến với tên gọi Fyodor Vaskovich).
 
