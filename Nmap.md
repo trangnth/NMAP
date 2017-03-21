@@ -142,7 +142,7 @@ Trong trường hợp này nmap sẽ quét các port UDP 53 và 4000, quét các
 ## Nmap hỗ trợ chạy các script đặc biệt NSE (Nmap Scrpting Engine)
 Đọc thêm tại http://nmap.org/book/nse-usage.html#nse-categories
 
-Ví dụ: `nmap -Pn -p80 --traceroute --script traceroute-geolocation amazon.com`
+**Ví dụ:** `nmap -Pn -p80 --traceroute --script traceroute-geolocation amazon.com`
 
 ## Nmap Output Formats
 - `-oN <filespec>` normal output
