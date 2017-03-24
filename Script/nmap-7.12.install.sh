@@ -7,13 +7,13 @@ CURRENT_VERSION=`nmap -V | grep version | cut -d ' ' -f3`
 VERSION="7.12"
 
 if [ "$CURRENT_VERSION" == "$VERSION" ]; then
-	echo "Installed nmap $VERSION"
-	exit
+        echo "Installed nmap $VERSION"
+        exit
 fi
 
 ### Remove old version
 if [ "x$CURRENT_VERSION" != "x" ]; then
-	apt-get remove nmap -y
+        apt-get remove nmap -y
 fi
 
 ##############Install #############
