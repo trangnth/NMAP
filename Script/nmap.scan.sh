@@ -7,8 +7,12 @@ VNDATE=`date "+%Y-%m-%d-%H%M"`
 SERVER="192.168.169.135"
 PORT="514"
 
+### File config rsyslog
 RSYSLOGCONF="/etc/rsyslog.d/nmap.conf"
+
 DATESCAN=`date '+%Y-%m-%d %H:%M:%S'`
+
+###File config nmap
 PATH_CONF="/home/huyentrang/nmap/"
 CONF_FILE="nmap.conf"
 
@@ -23,7 +27,6 @@ if [ "x$CURRENT_VERSION" == "x" ]; then
 fi
 
 ### check config
-
 if [ ! -f $CONF_FILE ]; then
         echo "No config file!"
 fi
@@ -32,10 +35,9 @@ cd $PATH_CONF
 TARGET_SCAN=`cat $CONF_FILE | grep TARGET_SCAN | cut -f2`
 OPTIONS=`cat $CONF_FILE | grep OPTIONS | cut -f2`
 RUN=`cat $CONF_FILE | grep -w RUN | cut -f2`
-#echo $RUN
+
 if [[ $RUN == "n" ]]; then
-        #echo "3"
-        exit 0
+      exit 0
 fi
 
 RESULTS=/var/log/nmap.results.log
@@ -43,10 +45,8 @@ RESULTS=/var/log/nmap.results.log
 if [ -f $RESULTS ]; then
         rm $RESULTS
         touch $RESULTS
-        #echo "del"
 else
         touch $RESULTS
-#       chmod 660 $RESULTS
 fi
 
 # add config rsyslog
