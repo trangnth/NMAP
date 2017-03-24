@@ -1,4 +1,4 @@
-# NMAP SCAN
+﻿# NMAP SCAN
 Ubuntu 14.04
 
 Rsyslog-v8
@@ -40,10 +40,11 @@ google.com
 -sT : quét TCP
 -sU : quét UDP
 -p U:53,4000, T:1-100,444 : quét port UDP 53 và 4000, quét TCP port từ 1 đến 100 và port 444
-```
 
 ** Tất cả các file trên đều để trong /home/huyentrang/nmap**
+
 **File config rsyslog /etc/rsyslog.d**
+
 **File kết quả quét /var/log/nmap.results.log**
 
 ## Tạo crontab  
