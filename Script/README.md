@@ -1,6 +1,8 @@
 ﻿# NMAP SCAN
 Ubuntu 14.04
+
 Rsyslog-v8
+
 Nmap v7.12
 
 ## File rsyslog-v8.install.sh
@@ -24,8 +26,8 @@ Sửa server, port, path
 
 ## File nmap.conf
 Gồm có 3 dòng, vd: `RUN  y` dùng `tab` để phân cách
-- Dòng đầu `y` hoặc `n` để check xem có đc quét ko
-- Dòng 2 là target-scan có thể là 1 ip, range ip, subnet. Ví dụ
+- Dòng 1: `y` hoặc `n` để check xem có đc quét ko
+- Dòng 2: là target-scan có thể là 1 ip, range ip, subnet. Ví dụ
 ```
 192.168.169.192
 192.168.169.100-200
@@ -33,7 +35,7 @@ Gồm có 3 dòng, vd: `RUN  y` dùng `tab` để phân cách
 google.com
 ```
 
-- Dòng 3 là các tùy chọn quét: TCP, UDP hay port
+- Dòng 3: là các tùy chọn quét: TCP, UDP hay port
 ```
 -sT : quét TCP
 -sU : quét UDP
