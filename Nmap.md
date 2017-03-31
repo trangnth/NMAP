@@ -1,19 +1,12 @@
 #  NMAP (Network Mapper)
-1. [Overview](#overview)
+1. [Deployment](#deployment)[Overview](#overview)
   
-  [1.1. Manual](#manual)
-  
-  [1.2. Script](#script)
-  
-  [1.3. Configuration](#configuration)
-
-2. [Deployment](#deployment)
+2. [Overview](#overview)
 
 <a name="deployment"></a>
 
 ## 1. Deployment
 
-<a name="manual"></a>
 ### 1.1. Manual
 
 #### Requirements
@@ -66,13 +59,11 @@ local3.* @192.168.169.135:514
 ```
 `@192.168.169.135:514` là rsyslog server nhận log theo UDP từ cổng 514
 
-<a name="script"></a>
 ### 1.2. Script
 [Scripts](Script/README.md)
 
 Auto scan nmap
 
-<a name="configuration"></a>
 ### 1.3. Configuration
 Thêm một số cấu hình vào hệ thống syslog để phân tích log
 
