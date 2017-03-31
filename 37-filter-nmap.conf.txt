@@ -1,0 +1,17 @@
+filter {
+    if [type] == "nmap" {
+        grok {
+                match => { "message" => "%{PROG:Hostname} %{PROG:logprogram} %{GREEDYDATA:message}" }
+                overwrite => [ "message" ]
+        }
+    }
+}
+filter {
+
+        if [type] == "nmap" {
+               grok {
+                        patterns_dir => ["/etc/logstash/extra_patterns"]
+                        match => { "message" => [ "%{PORTS}", "%{NMAP}" ] }
+                }
+        }
+}
