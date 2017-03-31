@@ -1,0 +1,11 @@
+input {
+    kafka {      
+		bootstrap_servers => "192.168.169.159:9092"
+		topics => ["nmap"]
+		client_id => "nmap"
+		consumer_threads => 1
+		type => "nmap"
+    }
+}
+#input kafka vào logstah
+
