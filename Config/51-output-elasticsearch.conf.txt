@@ -1,0 +1,11 @@
+output {
+    if [type] == "nmap" {
+        elasticsearch {
+        hosts => [ "192.168.169.136:9200" ]
+        index => "nmap-%{+YYYY.MM.dd}"
+        }
+        stdout { codec => rubydebug }
+    }
+}
+#logstash output elasticsearch
+

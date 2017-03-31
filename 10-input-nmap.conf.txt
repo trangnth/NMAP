@@ -1,8 +1,0 @@
-input {
-    file {
-		path => "/data/log/*/nmap.log"
-		type => "nmap"
-		start_position => "beginning"
-    }
-}
-

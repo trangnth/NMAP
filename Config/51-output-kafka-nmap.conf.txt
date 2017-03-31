@@ -1,0 +1,13 @@
+output {
+    if [type] == "nmap" {
+	kafka {
+            topic_id => "nmap"
+			bootstrap_servers => ["192.168.169.159:9092"]
+			client_id => "nmap"
+        }
+        stdout { codec => rubydebug }
+    }
+}
+
+#logstash ra kafka
+
