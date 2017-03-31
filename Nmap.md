@@ -1,11 +1,11 @@
 #  NMAP (Network Mapper)
 1. [Overview](#overview)
   
-  1.1. [Manual](#manual)
+  [1.1. Manual](#manual)
   
-  1.2. [Script](#script)
+  [1.2. Script](#script)
   
-  1.3. [Configuration](#configuration)
+  [1.3. Configuration](#configuration)
 
 2. [Deployment](#deployment)
 
