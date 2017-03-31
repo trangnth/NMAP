@@ -3,6 +3,8 @@
   
 2. [Overview](#overview)
 
+3. [Use cases](#usecases)
+
 <a name="deployment"></a>
 
 ## 1. Deployment
@@ -234,3 +236,6 @@ Trong trường hợp này nmap sẽ quét các port UDP 53 và 4000, quét các
 
 
 Read more: http://www.mystown.com/2016/03/huong-dan-su-dung-nmap-e-scan-port-tren.html#ixzz4bY6xQJ6a
+
+<a name="usecases"></a>
+## Use case
