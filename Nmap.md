@@ -1,7 +1,7 @@
 #  NMAP (Network Mapper)
-1. [Deployment](#deployment)
-  
-2. [Overview](#overview)
+1. [Overview](#overview)
+
+2. [Deployment](#deployment)
 
 3. [Research](#research)
 
