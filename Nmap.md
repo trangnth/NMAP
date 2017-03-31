@@ -104,7 +104,7 @@ Kiểm tra topics kafka: `bin/kafka-topics.sh --list --zookeeper localhost:2181`
 ## 3. Research
 ### Scan với Nmap
 
-nmap [ <Scan Type> ...] [ <Options> ] { <target specification> }
+`nmap [ <Scan Type> ...] [ <Options> ] { <target specification> }`
 
 Bắt đầu với các lệch cơ bản:
 - Quét 1 IP	`nmap 192.168.1.1`
