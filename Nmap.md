@@ -1,13 +1,30 @@
 #  NMAP (Network Mapper)
-1. [Deployment](#deployment)[Overview](#overview)
+1. [Deployment](#deployment)
   
 2. [Overview](#overview)
 
-3. [Use cases](#usecases)
+3. [Research](#research)
+
+4. [Use cases](#usecases)
+
+
+<a name="overview"></a>
+## 1. Overview
+Nmap (Network Mapper) là một công cụ quét, theo dõi và đánh giá bảo mật một hệ thống mạng được phát triển bởi Gordon Lyon (hay còn được biết đến với tên gọi Fyodor Vaskovich).
+
+Nmap được công bố lần đầu tiên vào tháng 9 năm 1997.
+
+Nmap là phần mềm mã nguồn mở miễn phí, ban đầu chỉ được phát triển trên nền tảng Linux sau đó được phát triển trên nhiều nền tảng khác nhau như Windows, Solari, Mac OS… và phát triển thêm phiên bản giao diện người dùng (zenmap).
+
+Các chức năng của nmap:  
+- Phát hiện host trong mạng.
+- Liệt kê các port đang mở trên một host.
+- Xác định các dịch vụ chạy trên các port đang mở cùng với phần mềm và phiên bản đang dùng.
+- Xác đinh hệ điều hành của thiết bị.
+- Chạy các script đặc biệt.
 
 <a name="deployment"></a>
-
-## 1. Deployment
+## 2. Deployment
 
 ### 1.1. Manual
 
@@ -21,19 +38,19 @@ Nmap v7.12
 #### Installation
 Mặc định ubuntu 14.04 sẽ cài nmap 6.40 và rsyslog 7
 
-- Install rsyslog 8
+- Install rsyslog 8.25
 ```
 add-apt-repository ppa:adiscon/v8-stable -y
 apt-get update
 apt-get -y install rsyslog
 rm /etc/apt/sources.list.d/adiscon-v8-stable-trusty.list
-apt-get update;
+apt-get update
 ```
 Sau khi cài đặt thì restart service: `service rsyslog restart`
 
 Gõ `rsyslogd -v` để kiểm tra 
 
-- Install nmap 
+- Install nmap 7.12
 ```
 add-apt-repository ppa:pi-rho/security -y
 apt-get update
@@ -79,26 +96,12 @@ Thêm một số cấu hình vào hệ thống syslog để phân tích log
 192.168.169.161 => kibana
 ```
 
-Một số lệnh check config 
-logstash: `/usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/ --config.reload.automatic`
-kafka: `bin/kafka-topics.sh --list --zookeeper localhost:2181`
+Chạy logstash: `/usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/ --config.reload.automatic`
 
-<a name="overview"></a>
-## 2. Overview
-Nmap (Network Mapper) là một công cụ quét, theo dõi và đánh giá bảo mật một hệ thống mạng được phát triển bởi Gordon Lyon (hay còn được biết đến với tên gọi Fyodor Vaskovich).
+Kiểm tra topics kafka: `bin/kafka-topics.sh --list --zookeeper localhost:2181`
 
-Nmap được công bố lần đầu tiên vào tháng 9 năm 1997.
-
-Nmap là phần mềm mã nguồn mở miễn phí, ban đầu chỉ được phát triển trên nền tảng Linux sau đó được phát triển trên nhiều nền tảng khác nhau như Windows, Solari, Mac OS… và phát triển thêm phiên bản giao diện người dùng (zenmap).
-
-Các chức năng của nmap:  
-- Phát hiện host trong mạng.
-- Liệt kê các port đang mở trên một host.
-- Xác định các dịch vụ chạy trên các port đang mở cùng với phần mềm và phiên bản đang dùng.
-- Xác đinh hệ điều hành của thiết bị.
-- Chạy các script đặc biệt.
-
-
+<a name="research"></a>
+## 3. Research
 ### Scan với Nmap
 
 nmap [ <Scan Type> ...] [ <Options> ] { <target specification> }
@@ -238,4 +241,4 @@ Trong trường hợp này nmap sẽ quét các port UDP 53 và 4000, quét các
 Read more: http://www.mystown.com/2016/03/huong-dan-su-dung-nmap-e-scan-port-tren.html#ixzz4bY6xQJ6a
 
 <a name="usecases"></a>
-## Use case
+## 4. Use case
