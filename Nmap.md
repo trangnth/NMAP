@@ -1,4 +1,67 @@
 #  NMAP (Network Mapper)
+[Overview](#overview)
+[Deployment](#deployment)
+<a name="deployment")
+## Deployment
+1. [Manual]
+### Requirements
+Ubuntu 14.04
+
+Rsyslog-v8
+
+Nmap v7.12
+
+### Install
+Mặc định ubuntu 14.04 sẽ cài nmap 6.40 và rsyslog 7
+
+- Install rsyslog 8
+```
+add-apt-repository ppa:adiscon/v8-stable -y
+apt-get update
+apt-get -y install rsyslog
+rm /etc/apt/sources.list.d/adiscon-v8-stable-trusty.list
+apt-get update;
+```
+Sau khi cài đặt thì restart service: `service rsyslog restart`
+
+Gõ `rsyslogd -v` để kiểm tra 
+
+- Install nmap 
+```
+add-apt-repository ppa:pi-rho/security -y
+apt-get update
+apt-get -y install nmap
+rm -rf /etc/apt/sources.list.d/pi-rho-security-trusty.list
+apt-get update
+```
+gõ `nmap -V` để kiểm tra version
+
+Quét thử TCP: `namp -sT 192.168.169.192 -oG /var/log/nmap.results.log`
+
+file kết quả quét được lưu trong đường dẫn `/var/log/nmap.results.log`
+
+- Config đẩy log tới rsyslog server
+Add thêm file `/etc/rsyslog.d/nmap.conf` có nội dung:
+```
+module(load="imfile" PollingInterval="10") 
+input(type="imfile"
+  File="/var/log/nmap.results.log"
+  Tag="nmap"
+  Severity="info"
+  Facility="local3"
+)
+local3.* @192.168.169.135:514
+```
+`@192.168.169.135:514` là rsyslog server nhận log theo UDP từ cổng 514
+
+2. [Scripts](Script/README.md)
+Auto scan nmap
+
+3. [Configuration]
+Thêm một số cấu hình vào hệ thống syslog để phân tích log
+
+
+<a name="overview"></a>
 ## Khái niệm
 Nmap (Network Mapper) là một công cụ quét, theo dõi và đánh giá bảo mật một hệ thống mạng được phát triển bởi Gordon Lyon (hay còn được biết đến với tên gọi Fyodor Vaskovich).
 
@@ -13,11 +76,7 @@ Các chức năng của nmap:
 - Xác đinh hệ điều hành của thiết bị.
 - Chạy các script đặc biệt.
 
-## Install
-```
-apt-get update
-apt-get install nmap
-```
+
 ## Scan với Nmap
 
 nmap [ <Scan Type> ...] [ <Options> ] { <target specification> }
