@@ -7,16 +7,16 @@
 
 ## 1. Deployment
 
-## Manual
+### 1.1 Manual
 
-### Requirements
+#### Requirements
 Ubuntu 14.04
 
 Rsyslog-v8
 
 Nmap v7.12
 
-### Installation
+#### Installation
 Mặc định ubuntu 14.04 sẽ cài nmap 6.40 và rsyslog 7
 
 - Install rsyslog 8
@@ -59,12 +59,12 @@ local3.* @192.168.169.135:514
 ```
 `@192.168.169.135:514` là rsyslog server nhận log theo UDP từ cổng 514
 
-## Script
+### 1.2 Script
 [Scripts](Script/README.md)
 
 Auto scan nmap
 
-## Configuration
+### 1.3 Configuration
 Thêm một số cấu hình vào hệ thống syslog để phân tích log
 
 
@@ -84,7 +84,7 @@ Các chức năng của nmap:
 - Chạy các script đặc biệt.
 
 
-## Scan với Nmap
+### Scan với Nmap
 
 nmap [ <Scan Type> ...] [ <Options> ] { <target specification> }
 
@@ -205,12 +205,12 @@ nmap -sS -sU -p U:53,4000, T:1-100,444 192.168.169.192
 ```
 Trong trường hợp này nmap sẽ quét các port UDP 53 và 4000, quét các port TCP 444, từ 1 đến 100, từ 8000 đến 8010 bằng kỹ thuật SYN scan.
 
-## Nmap hỗ trợ chạy các script đặc biệt NSE (Nmap Scrpting Engine)
+### Nmap hỗ trợ chạy các script đặc biệt NSE (Nmap Scrpting Engine)
 Đọc thêm tại http://nmap.org/book/nse-usage.html#nse-categories
 
 **Ví dụ:** `nmap -Pn -p80 --traceroute --script traceroute-geolocation amazon.com`
 
-## Nmap Output Formats
+### Nmap Output Formats
 - `-oN <filespec>` normal output
 - `-oX <filespec>` XML output
 - `-oS <filespec>` Script kiddie output
