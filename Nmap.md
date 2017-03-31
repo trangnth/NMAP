@@ -10,11 +10,11 @@
 ### 1.1. Manual
 
 #### Requirements
+```
 Ubuntu 14.04
-
 Rsyslog-v8
-
 Nmap v7.12
+```
 
 #### Installation
 Mặc định ubuntu 14.04 sẽ cài nmap 6.40 và rsyslog 7
@@ -66,7 +66,7 @@ Auto scan nmap
 
 ### 1.3. Configuration
 Thêm một số cấu hình vào hệ thống syslog để phân tích log
-
+[config](Config)
 
 <a name="overview"></a>
 ## 2. Overview
