@@ -1,6 +1,8 @@
 #  NMAP (Network Mapper)
 [Overview](#overview)
+
 [Deployment](#deployment)
+
 <a name="deployment">
 ## Deployment
 1. [Manual]
@@ -11,7 +13,7 @@ Rsyslog-v8
 
 Nmap v7.12
 
-### Install
+### Installation
 Mặc định ubuntu 14.04 sẽ cài nmap 6.40 và rsyslog 7
 
 - Install rsyslog 8
