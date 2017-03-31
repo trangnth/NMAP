@@ -69,6 +69,18 @@ Thêm một số cấu hình vào hệ thống syslog để phân tích log
 
 [File Config](Config)
 
+```
+192.168.169.135 => rsyslog server
+192.168.169.159 => kafka
+192.168.169.160 => logstash indexer
+192.168.169.136 => elasticsearch
+192.168.169.161 => kibana
+```
+
+Một số lệnh check config 
+logstash: `/usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/ --config.reload.automatic`
+kafka: `bin/kafka-topics.sh --list --zookeeper localhost:2181`
+
 <a name="overview"></a>
 ## 2. Overview
 Nmap (Network Mapper) là một công cụ quét, theo dõi và đánh giá bảo mật một hệ thống mạng được phát triển bởi Gordon Lyon (hay còn được biết đến với tên gọi Fyodor Vaskovich).
