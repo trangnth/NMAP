@@ -66,7 +66,7 @@ service rsyslog restart
 # start scan
 echo "Defaut scan: DIRECTORY=$TARGET_SCAN ! "
 
-nmap $OPTIONS -T4 $TARGET_SCAN -oN $RESULTS
+nmap $OPTIONS -T4 $TARGET_SCAN -oG $RESULTS
 #echo $DATESCAN >> $RESULTS
 
 ##################Exit Code Scan##############
