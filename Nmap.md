@@ -1,13 +1,13 @@
 #  NMAP (Network Mapper)
-[Overview](#overview)
+1. [Overview](#overview)
 
-[Deployment](#deployment)
+2. [Deployment](#deployment)
 
 <a name="deployment">
 
-## Deployment
+## 1. Deployment
 
-1. Manual
+## Manual
 
 ### Requirements
 Ubuntu 14.04
@@ -59,17 +59,17 @@ local3.* @192.168.169.135:514
 ```
 `@192.168.169.135:514` là rsyslog server nhận log theo UDP từ cổng 514
 
-2. Script
+## Script
 [Scripts](Script/README.md)
 
 Auto scan nmap
 
-3. Configuration
+## Configuration
 Thêm một số cấu hình vào hệ thống syslog để phân tích log
 
 
 <a name="overview"></a>
-## Overview
+## 2. Overview
 Nmap (Network Mapper) là một công cụ quét, theo dõi và đánh giá bảo mật một hệ thống mạng được phát triển bởi Gordon Lyon (hay còn được biết đến với tên gọi Fyodor Vaskovich).
 
 Nmap được công bố lần đầu tiên vào tháng 9 năm 1997.
