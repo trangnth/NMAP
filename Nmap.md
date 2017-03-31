@@ -67,7 +67,7 @@ Auto scan nmap
 ### 1.3. Configuration
 Thêm một số cấu hình vào hệ thống syslog để phân tích log
 
-[config](File Config)
+[File Config](Config)
 
 <a name="overview"></a>
 ## 2. Overview
