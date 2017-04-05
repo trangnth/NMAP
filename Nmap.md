@@ -190,54 +190,54 @@ Quét hệ điều hành của server:
     nmap -O remote_host
 
 Sử dụng "-" hoặc "/24" để quét nhiều host / server cùng lúc 
-```
-nmap -PN xxx.xxx.xxx.xxx-yyy
-```
+
+    nmap -PN xxx.xxx.xxx.xxx-yyy
+
 Quét một mạng rộng hơn 
-```
-nmap -sP network_address_range
-```
+
+    nmap -sP network_address_range
+
 Quét mà không tra cứu DNS (Điều này sẽ giúp bạn quét nhanh hơn) 
-```
-nmap -n remote_host
-```
+
+    nmap -n remote_host
+
 Quét một port cụ thể hoặc 1 dải thay vì quét chung các port thông dụng
-```
-nmap -p port_number remote_host
-nmap -p <port ranges>
-```
+
+    nmap -p port_number remote_host
+    nmap -p <port ranges>
+
 Quét kết nối TCP, Nmap sẽ thực hiện việc quét bắt tay 3 bước 
-```
-nmap -sT remote_host
-```
+
+    nmap -sT remote_host
+
 
 Quét kết nôi UDP
-```
-nmap -sU remote_host
-```
+
+    nmap -sU remote_host
+
 Quét TCP và UDP từng port (khá lâu)
-```
-nmap -n -PN -sT -sU -p- remote_host
-```
+
+    nmap -n -PN -sT -sU -p- remote_host
+
 Quét TCP SYN scan (-sS):
-```
-nmap -sS remote_host
-```
+
+    nmap -sS remote_host
+
 Quét xác định phiên bản dịch vụ đang chyaj trên host
-```
-nmap -PN -p port_number -sV remote_host
-```
+
+    nmap -PN -p port_number -sV remote_host
+
 
 **Ví dụ:** 
-```
-nmap -sS -sU -p U:53,4000, T:1-100,444 192.168.169.192
-```
+
+    nmap -sS -sU -p U:53,4000, T:1-100,444 192.168.169.192
+
 Trong trường hợp này nmap sẽ quét các port UDP 53 và 4000, quét các port TCP 444, từ 1 đến 100, từ 8000 đến 8010 bằng kỹ thuật SYN scan.
 
 ### Nmap hỗ trợ chạy các script đặc biệt NSE (Nmap Scrpting Engine)
 Đọc thêm tại http://nmap.org/book/nse-usage.html#nse-categories
 
-**Ví dụ:** `nmap -Pn -p80 --traceroute --script traceroute-geolocation amazon.com`
+**Ví dụ:**  `nmap -Pn -p80 --traceroute --script traceroute-geolocation amazon.com`
 
 ### Nmap Output Formats
 - `-oN <filespec>` normal output
