@@ -32,11 +32,11 @@ Các chức năng của nmap:
 ### 1.1. Manual
 
 #### Requirements
-```
-Ubuntu 14.04
-Rsyslog-v8
-Nmap v7.12
-```
+
+    Ubuntu 14.04
+    Rsyslog-v8
+    Nmap v7.12
+
 
 #### Installation
 
@@ -44,11 +44,11 @@ Mặc định ubuntu 14.04 sẽ cài nmap 6.40 và rsyslog 7
 
 - Install rsyslog 8.25
 
-  add-apt-repository ppa:adiscon/v8-stable -y
-  apt-get update
-  apt-get -y install rsyslog
-  rm /etc/apt/sources.list.d/adiscon-v8-stable-trusty.list
-  apt-get update
+      add-apt-repository ppa:adiscon/v8-stable -y
+      apt-get update
+      apt-get -y install rsyslog
+      rm /etc/apt/sources.list.d/adiscon-v8-stable-trusty.list
+      apt-get update
 
 Sau khi cài đặt thì restart service: `service rsyslog restart`
 
@@ -56,11 +56,11 @@ Gõ `rsyslogd -v` để kiểm tra
 
 - Install nmap 7.12
 
-    add-apt-repository ppa:pi-rho/security -y
-    apt-get update
-    apt-get -y install nmap
-    rm -rf /etc/apt/sources.list.d/pi-rho-security-trusty.list
-    apt-get update
+      add-apt-repository ppa:pi-rho/security -y
+      apt-get update
+      apt-get -y install nmap
+      rm -rf /etc/apt/sources.list.d/pi-rho-security-trusty.list
+      apt-get update
 
 gõ `nmap -V` để kiểm tra version
 
@@ -187,7 +187,7 @@ https://nmap.org/book/man-host-discovery.html
 
 Quét hệ điều hành của server: 
   
-  nmap -O remote_host
+    nmap -O remote_host
 
 Sử dụng "-" hoặc "/24" để quét nhiều host / server cùng lúc 
 ```
