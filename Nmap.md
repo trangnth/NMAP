@@ -1,4 +1,4 @@
-#  NMAP (Network Mapper)
+﻿#  NMAP (Network Mapper)
 
 1. [Overview](#overview)
 
@@ -104,6 +104,39 @@ Thêm một số cấu hình vào hệ thống syslog để phân tích log
 Chạy logstash: `/usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/ --config.reload.automatic`
 
 Kiểm tra topics kafka: `bin/kafka-topics.sh --list --zookeeper localhost:2181`
+
+
+### 1.4. Report
+
+Kết quả hiện trên kibana
+
+####Để xem kết quả thì vào Mannagement -> Index Patters -> add new và điền thông tin như trong hình
+
+<img src = "1">
+
+Sau đó có thể xem kết quả trong Discover
+
+<img src = "2">
+
+####Tạo báo cáo trên kibana
+
+Trong Discover tìm kiếm với từ khóa `*Pots` rồi lưu lại với tên `nmap-results` để xem kết quả quét được
+
+<img src = "3">
+
+Tiếp tục với từ khóa `*done*` để xem thời gian quét xong, quét bao nhiêu host, quét trong bao lâu, lưu với tên `Scan Done`
+
+<img src = "4">
+
+Vào Dashboard chọn add -> Saved Search add `Scan Done` và `nmap-results` và lưu lại với tên `Nmap-report`
+
+<img src = "5">
+
+Báo cáo 
+
+<img src = "6"> 
+
+
 
 <a name="usecases"></a>
 ## 3. Một vài lưu ý
