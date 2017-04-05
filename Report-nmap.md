@@ -2,8 +2,6 @@
 
 ### Để xem kết quả thì vào Mannagement -> Index Patters -> add new và điền thông tin như trong hình
 
-<img src = "https://raw.github.com/trangnth/NMAP/master/img/1.png">
-
 <img src = "img/1.png">
 
 Sau đó có thể xem kết quả trong Discover
