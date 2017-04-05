@@ -4,6 +4,8 @@
 
 <img src = "https://raw.github.com/trangnth/NMAP/master/img/1.png">
 
+<img src = "img/1.png">
+
 Sau đó có thể xem kết quả trong Discover
 
 <img src = "https://raw.github.com/trangnth/NMAP/master/img/2.png">
