@@ -1,6 +1,6 @@
-#Kết quả trên Kibana
+# Kết quả trên Kibana
 
-#### Để xem kết quả thì vào Mannagement -> Index Patters -> add new và điền thông tin như trong hình
+### Để xem kết quả thì vào Mannagement -> Index Patters -> add new và điền thông tin như trong hình
 
 <img src = "https://raw.github.com/trangnth/NMAP/master/img/1.png">
 
@@ -8,7 +8,7 @@ Sau đó có thể xem kết quả trong Discover
 
 <img src = "https://raw.github.com/trangnth/NMAP/master/img/2.png">
 
-#### Tạo báo cáo trên kibana
+### Tạo báo cáo trên kibana
 
 Trong Discover tìm kiếm với từ khóa `*Pots` rồi lưu lại với tên `nmap-results` để xem kết quả quét được
 
