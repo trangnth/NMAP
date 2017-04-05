@@ -2,8 +2,8 @@
 
 Gồm 2 file:
 
-  10-input-nmap.conf.txt
-  51-output-kafka-nmap.conf.txt
+    10-input-nmap.conf.txt
+    51-output-kafka-nmap.conf.txt
 
 Đặt ở `/etc/logstash/conf.d`
 
@@ -11,9 +11,9 @@ Gồm 2 file:
 
 3 file:
 
-  10-input-kafka.conf.txt
-  37-filter-nmap.conf.txt
-  51-output-elasticsearch.conf.txt
+    10-input-kafka.conf.txt
+    37-filter-nmap.conf.txt
+    51-output-elasticsearch.conf.txt
 
 Đặt ở `/etc/logstash/conf.d`
 
