@@ -186,7 +186,7 @@ https://nmap.org/book/man-host-discovery.html
 ## Một số lệnh phổ biến
 
 Quét hệ điều hành của server: 
-
+  
   nmap -O remote_host
 
 Sử dụng "-" hoặc "/24" để quét nhiều host / server cùng lúc 
