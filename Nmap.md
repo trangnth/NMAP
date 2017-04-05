@@ -110,11 +110,13 @@ Kiểm tra topics kafka: `bin/kafka-topics.sh --list --zookeeper localhost:2181`
 
 Việc scan port sẽ rất tốn thời gian và quét UDP sẽ lâu hơn TCP, do TCP có cơ chế bắt tay ba bước, truyền tin tin cậy nên sẽ nhanh hơn UDP
 
+Quét nmap sẽ ảnh hưởng tới hiệu năng mạng, nên để 1 giờ quét 1 lần hoặc 1 ngày 
+
 Nếu muốn quét TCP một dải ip từ 192.168.169.100 tới 192.168.169.109 và lưu kết quả ra file text.txt theo dạng grepable
 
     nmap -sT -T4 192.168.169.100-109 -oG test.txt
 
-`-T4` để quét nhanh
+Sử dụng `-T4` để quét nhanh, –F (Fast scan) để quét 100 port phổ biến nhất thay vì mặc định 1000 port.
 
 file output có dạng: 
 
