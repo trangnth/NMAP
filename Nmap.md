@@ -118,7 +118,7 @@ Nếu muốn quét TCP một dải ip từ 192.168.169.100 tới 192.168.169.109
 
 file output có dạng: 
 
-<img src = "">
+<img src = "https://raw.github.com/trangnth/NMAP/master/nmap-output.png">
 
 
 <a name="research"></a>
