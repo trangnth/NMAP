@@ -4,9 +4,9 @@
 
 2. [Deployment](#deployment)
 
-3. [Research](#research)
+3. [Use cases](#usecases)
 
-4. [Use cases](#usecases)
+4. [Research](#research)
 
 
 <a name="overview"></a>
@@ -105,8 +105,24 @@ Chạy logstash: `/usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/ --co
 
 Kiểm tra topics kafka: `bin/kafka-topics.sh --list --zookeeper localhost:2181`
 
+<a name="usecases"></a>
+## 3. Một vài lưu ý
+
+Việc scan port sẽ rất tốn thời gian và quét UDP sẽ lâu hơn TCP, do TCP có cơ chế bắt tay ba bước, truyền tin tin cậy nên sẽ nhanh hơn UDP
+
+Nếu muốn quét TCP một dải ip từ 192.168.169.100 tới 192.168.169.109 và lưu kết quả ra file text.txt theo dạng grepable
+
+    nmap -sT -T4 192.168.169.100-109 -oG test.txt
+
+`-T4` để quét nhanh
+
+file output có dạng: 
+
+<img src = "">
+
+
 <a name="research"></a>
-## 3. Research
+## 4. Research
 ### Scan với Nmap
 
 `nmap [ <Scan Type> ...] [ <Options> ] { <target specification> }`
@@ -251,5 +267,4 @@ Trong trường hợp này nmap sẽ quét các port UDP 53 và 4000, quét các
 
 Read more: http://www.mystown.com/2016/03/huong-dan-su-dung-nmap-e-scan-port-tren.html#ixzz4bY6xQJ6a
 
-<a name="usecases"></a>
-## 4. Use case
+
