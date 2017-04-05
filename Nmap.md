@@ -112,29 +112,29 @@ Kết quả hiện trên kibana
 
 ####Để xem kết quả thì vào Mannagement -> Index Patters -> add new và điền thông tin như trong hình
 
-<img src = "1">
+<img src = "https://raw.github.com/trangnth/NMAP/master/img/1.png">
 
 Sau đó có thể xem kết quả trong Discover
 
-<img src = "2">
+<img src = "https://raw.github.com/trangnth/NMAP/master/img/2.png">
 
 ####Tạo báo cáo trên kibana
 
 Trong Discover tìm kiếm với từ khóa `*Pots` rồi lưu lại với tên `nmap-results` để xem kết quả quét được
 
-<img src = "3">
+<img src = "https://github.com/trangnth/NMAP/blob/master/img/3.png">
 
 Tiếp tục với từ khóa `*done*` để xem thời gian quét xong, quét bao nhiêu host, quét trong bao lâu, lưu với tên `Scan Done`
 
-<img src = "4">
+<img src = "https://github.com/trangnth/NMAP/blob/master/img/4.png">
 
 Vào Dashboard chọn add -> Saved Search add `Scan Done` và `nmap-results` và lưu lại với tên `Nmap-report`
 
-<img src = "5">
+<img src = "https://raw.github.com/trangnth/NMAP/master/img/5.png">
 
 Báo cáo 
 
-<img src = "6"> 
+<img src = "https://github.com/trangnth/NMAP/blob/master/img/6.png"> 
 
 
 
@@ -153,7 +153,7 @@ Sử dụng `-T4` để quét nhanh, –F (Fast scan) để quét 100 port phổ
 
 file output có dạng: 
 
-<img src = "https://raw.github.com/trangnth/NMAP/master/nmap-output.png">
+<img src = "https://github.com/trangnth/NMAP/blob/master/img/nmap-output.png">
 
 
 <a name="research"></a>
