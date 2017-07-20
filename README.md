@@ -1,2 +1,2 @@
 # NMAP (Network  Mapper) trên Ubuntu
-Đưa vào hệ thống ELK
+Đưa log vào hệ thống ELK
