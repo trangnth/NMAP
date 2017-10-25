@@ -64,7 +64,7 @@ Gõ `rsyslogd -v` để kiểm tra
 
 gõ `nmap -V` để kiểm tra version
 
-Quét thử TCP: `namp -sT 192.168.169.192 -oG /var/log/nmap.results.log`
+Quét thử TCP: `nmap -sT 192.168.169.192 -oG /var/log/nmap.results.log`
 
 file kết quả quét được lưu trong đường dẫn `/var/log/nmap.results.log`
 
