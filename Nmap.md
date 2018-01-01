@@ -72,14 +72,14 @@ file kết quả quét được lưu trong đường dẫn `/var/log/nmap.result
 
 Add thêm file `/etc/rsyslog.d/nmap.conf` có nội dung:
 
-  module(load="imfile" PollingInterval="10") 
-  input(type="imfile"
-    File="/var/log/nmap.results.log"
-    Tag="nmap"
-    Severity="info"
-    Facility="local3"
-  )
-  local3.* @192.168.169.135:514
+      module(load="imfile" PollingInterval="10") 
+      input(type="imfile"
+        File="/var/log/nmap.results.log"
+        Tag="nmap"
+        Severity="info"
+        Facility="local3"
+      )
+      local3.* @192.168.169.135:514
 
 `@192.168.169.135:514` là rsyslog server nhận log theo UDP từ cổng 514
 
@@ -94,11 +94,11 @@ Thêm một số cấu hình vào hệ thống syslog để phân tích log
 [File Config](Config)
 
 
-  192.168.169.135 => rsyslog server
-  192.168.169.159 => kafka
-  192.168.169.160 => logstash indexer
-  192.168.169.136 => elasticsearch
-  192.168.169.161 => kibana
+      192.168.169.135 => rsyslog server
+      192.168.169.159 => kafka
+      192.168.169.160 => logstash indexer
+      192.168.169.136 => elasticsearch
+      192.168.169.161 => kibana
 
 
 Chạy logstash: `/usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/ --config.reload.automatic`
@@ -138,12 +138,12 @@ file output có dạng:
 
 Bắt đầu với các lệch cơ bản:
 
-- Quét 1 IP	`nmap 192.168.1.1`
-- Quét 1 dải IP	`nmap 192.168.1.1/24`
-- Quét 1 domain	`nmap google.com`
-- Quét 1 danh sách các mục tiêu từ 1 file với tùy chọn -iL	`nmap -iL list.txt`
+- Quét 1 IP:	`nmap 192.168.1.1`
+- Quét 1 dải IP:	`nmap 192.168.1.1/24`
+- Quét 1 domain:	`nmap google.com`
+- Quét 1 danh sách các mục tiêu từ 1 file với tùy chọn -iL:	`nmap -iL list.txt`
 
-Kết quả cảu nmap là một danh sách các targets được scan, chủ yếu các thông tin đó là interesting ports table, nó liệt kê các port number, protocol, tên các service và state.
+Kết quả của nmap là một danh sách các targets được scan, chủ yếu các thông tin đó là interesting ports table, nó liệt kê các port number, protocol, tên các service và state.
 
 Có 6 port states:
 
@@ -190,7 +190,7 @@ Một vài tùy chọn:
 - `-PA` <port list> (TCP ACK Ping)
 - `-PU` <port list> (UDP Ping)
 - `-PY` <port list> (SCTP INIT Ping)
-- `-PO <protocol list>` (IP Protocol Ping)
+- `-PO` <protocol list>` (IP Protocol Ping)
 - `-PR` (ARP Ping)
 - `--disable-arp-ping` (No ARP or ND Ping)
 - `-R` phân giải DNS tất cả các tagets
