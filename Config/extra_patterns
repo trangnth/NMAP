@@ -1,0 +1,5 @@
+#NMAP
+#STATUS %{WORD}\: %{IPORHOST:Target-scan} \(\)\#011Status\: %{WORD:Status}
+PORTS %{WORD}\: %{IPORHOST:Target-scan} \(\)\#011Ports: %{GREEDYDATA:Port-state-protocol-service}\#011Ignored State: %{GREEDYDATA:IgnoreState}
+TIMESCAN %{DAY} %{MONTH}  %{MONTHDAY} %{TIME} %{YEAR}
+NMAP \# Nmap done at %{TIMESCAN:ScanDone} \-\- %{NUMBER:IPScan} IP %{WORD} \(%{NUMBER:HostUp} %{WORD} up\) scanned in %{GREEDYDATA:TimeScan}

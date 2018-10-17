@@ -1,9 +1,9 @@
-## Rsyslog server (192.168.169.135) 
+﻿## Rsyslog server (192.168.169.135) 
 
 Gồm 2 file:
 
-    10-input-nmap.conf.txt
-    51-output-kafka-nmap.conf.txt
+    10-input-nmap.conf
+    51-output-kafka-nmap.conf
 
 Đặt ở `/etc/logstash/conf.d`
 
@@ -11,10 +11,10 @@ Gồm 2 file:
 
 3 file:
 
-    10-input-kafka.conf.txt
-    37-filter-nmap.conf.txt
-    51-output-elasticsearch.conf.txt
+    10-input-kafka.conf
+    37-filter-nmap.conf
+    51-output-elasticsearch.conf
 
 Đặt ở `/etc/logstash/conf.d`
 
-File `extra_patterns.txt` đặt ở `/etc/logstash/`
+File `extra_patterns` đặt ở `/etc/logstash/`
